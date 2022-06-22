@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <head>
+        <h1>Mw/h Calculator</h1>
+    </head>
+    <main id="main">
+        <form id="mother" name="mother">
+            <div>
+            <img id="img" src="./img/electrodomestico.png" alt="Icono del electrodomestico">
+            <select name="selBox" id="selBox">
+                <optgroup label="Cocina/Patio/Terraza">
+                    <option value=""> Elige una opcion...</option>
+                    <option value="Nev">Nevera</option>
+                    <option value="Lav">Lavadora</option>
+                    <option value="Vit">Vitrocerámica</option>
+                    
+                    <option value="Caf">Cafetera</option>
+                    <option value="Vaj">Lavavajillas</option>                   
+                </optgroup>
+                <optgroup label="Salón/Comedor">
+                    <option value="TV">TV</option>
+                    <option value="PC">PC</option>
+                    <option value="SisSon">Sistema de Sonido</option>
+                </optgroup>
+                <optgroup label="Otros"></optgroup>
+                    <option value="Carg">Cargador Móvil</option>
+                    <option value="Asp">Aspiradora</option>
+                    <option value="Pla">Plancha</option>
+                    <option value="Otr">Otro</option>
+                </optgroup>
+                </select>
+           
+            </div>
+            </div><input type="nombre" id="nombre" name="nombre" placeholder="Nombre del aparato">
+            <div><input type="number" id="wats" name="wats" placeholder="Consumo en Kw/h">
+            <label for="wats">Kw/h</label></div>
+            <button id="anadir" type="submit">Añadir</button>           
+        </form>
+    </main>
+    <script  type="module" src="./js/botons.js"></script>
+    <script type="module" src="./js/imagenes.js"></script>
+  </body>
+</html>
