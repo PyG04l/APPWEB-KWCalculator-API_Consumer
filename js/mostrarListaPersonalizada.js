@@ -1,6 +1,6 @@
 "use strict";
+import {selBoxGestion} from "./gestionSelBox.js";
 
-//import { getHora } from "./gestionHoras.js";
 
 const mainElement = document.querySelector("#main");
 let cont = 0;
@@ -41,7 +41,6 @@ function allInLS(event) {
     "listaElectrodomesticos",
     JSON.stringify(listaElectrodomesticos)
   );
-  //console.log(listaElectrodomesticos[listaElectrodomesticos.length - 1][0]);
   const fE = draw1Item(arr);
   mainElement.append(fE);
   if (!document.getElementById("total")) {
@@ -210,7 +209,6 @@ function createSel() {
 }
 
 function createTotal2(total) {
-  //console.log(document.getElementById("horario").value + "valor");
   const dropElement = document.querySelector("#hora");
   const pElement = document.createElement("p");
   pElement.setAttribute("id", "total2");
@@ -231,7 +229,6 @@ function getHora() {
         totalItems += parseFloat(listaElectrodomesticos[i][3]);
       }
       const total = `${((totalItems * selectedPrice) / 1000).toFixed(2)}€/h`;
-      console.log(total);
 
       if (!document.getElementById("total2")) {
         createTotal2(total);
