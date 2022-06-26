@@ -163,7 +163,7 @@ function createSel() {
   fElement.setAttribute("id", "hora");
   selElement.setAttribute("name", "horario");
   selElement.setAttribute("id", "horario");
-  opElement.setAttribute("value", 25);
+  opElement.setAttribute("value", "");
 
   opElement.text = "Hora actual";
 
@@ -210,8 +210,8 @@ function createSel() {
 }
 
 function createTotal2(total) {
-  console.log(document.getElementById("horario").value + "valor");
-  if(document.getElementById("horario").value=="25") {
+  //console.log(document.getElementById("horario").value + "valor");
+  if(document.getElementById("horario").value=="") {
     document.getElementById("total2").remove();
   }
   const dropElement = document.querySelector("#hora");
