@@ -210,7 +210,7 @@ function createSel() {
 }
 
 function createTotal2(total) {
-  if(document.getElementById("horario").selectedIndex=0) {
+  if(document.getElementById("horario").value===25) {
     document.getElementById("total2").remove();
   }
   const dropElement = document.querySelector("#hora");
