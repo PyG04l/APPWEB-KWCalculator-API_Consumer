@@ -210,7 +210,7 @@ function createSel() {
 }
 
 function createTotal2(total) {
-  console.log(document.getElementById("horario").value)
+  console.log(document.getElementById("horario").value);
   if(document.getElementById("horario").value=="25") {
     document.getElementById("total2").remove();
   }
