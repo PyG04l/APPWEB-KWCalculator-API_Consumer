@@ -20,7 +20,6 @@ async function getPrice(url) {
     window.localStorage.setItem("Precios", JSON.stringify(precios));
     return precios;
   } catch (error) {
-    console.error("Tenemos un error", error.message);
     return []
   }
 }
@@ -55,8 +54,6 @@ function min(prices) {
 
 async function main(){
   let fechaUltimoAcceso = localStorage.getItem("FechaUltimoAcceso")
-
-  console.log("fechaUltimoAcceso", fechaUltimoAcceso )
   
   if (fechaUltimoAcceso !== null){
     fechaUltimoAcceso = +fechaUltimoAcceso
@@ -65,7 +62,6 @@ async function main(){
   if(fechaUltimoAcceso === null || fechaUltimoAcceso + 300000 < fecha){
     window.localStorage.setItem("FechaUltimoAcceso", JSON.stringify(fecha));
     let precios = await getPrice(urlPrecioLuz);
-    console.log("precios>>>", precios)
     max(precios);
     min(precios);
   }  
