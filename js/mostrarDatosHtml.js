@@ -2,9 +2,9 @@
 
 function mostraDatos(){
   
-  const lav = 2.55,
+  const lav = 0.624,
   tv = 0.099,
-  vaj = 2.46,
+  vaj = 1.5,
   caf = 1.95,
   asp = 1.44,
   pla = 2;
