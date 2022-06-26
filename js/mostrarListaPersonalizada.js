@@ -1,6 +1,6 @@
 "use strict";
-import {selBoxGestion} from "./gestionSelBox.js";
 
+import {selBoxGestion} from "./gestionSelBox.js";
 
 const mainElement = document.querySelector("#main");
 let cont = 0;
