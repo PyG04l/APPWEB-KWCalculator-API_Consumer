@@ -211,9 +211,6 @@ function createSel() {
 
 function createTotal2(total) {
   //console.log(document.getElementById("horario").value + "valor");
-  if(document.getElementById("horario").value=="") {
-    document.getElementById("total2").remove();
-  }
   const dropElement = document.querySelector("#hora");
   const pElement = document.createElement("p");
   pElement.setAttribute("id", "total2");
@@ -241,6 +238,11 @@ function getHora() {
       } else {
         document.getElementById("total2").remove();
         createTotal2(total);
+        
+      }
+      
+      if(document.getElementById("horario").value=="") {
+        document.getElementById("total2").remove();
       }
     }
   });
