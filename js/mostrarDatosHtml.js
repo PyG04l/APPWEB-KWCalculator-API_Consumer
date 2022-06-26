@@ -2,8 +2,6 @@
 
 function mostraDatos(){
   
-  console.log("Dentro de la fun mostraDatos ")
-  
   const lav = 2.55,
   tv = 0.099,
   vaj = 2.46,
