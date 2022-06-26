@@ -2,32 +2,78 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    font-family: 'Open Sans', sans-serif;
 }
+<<<<<<< HEAD
 
 h1 { 
     margin: 2rem;
+=======
+header{
+    width: 100%;
+}
+
+h1 { 
+>>>>>>> rocio
     padding: 1rem;
+    background-color: #311a91;
+    color:white;
+   
 }
 
 h1, h2 {
     text-align: center;
+<<<<<<< HEAD
     margin-bottom: 1.5rem;
     font-family: Montserrat;    
+=======
+    font-family: 'Montserrat', sans-serif;
+   
+>>>>>>> rocio
 }
 
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    background-color:rgb(245, 245, 246);
 }
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    background-color: #000062;
+    list-style-type: none;
+}
+
+
+nav ul li a{
+    color:white;
+    font-size: 2rem;
+    text-decoration: none;
+    border: none;
+}
+<<<<<<< HEAD
 
 article, section {
     border: 1px solid black;
+=======
+article, section{
+>>>>>>> rocio
     margin: 1rem;
     padding: 1rem;
     border-radius: 12px;
 }
+<<<<<<< HEAD
+=======
+article, section:nth-child(4), .relevantes{
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+ 
+
+}
+>>>>>>> rocio
 
 article ul {
     display: grid;
@@ -42,6 +88,20 @@ li {
     align-items:start;
     margin:1rem;
 }
+<<<<<<< HEAD
+=======
+.enlace a{
+    background-color: #311a91;
+    color: white;
+    text-decoration:none;
+    font-size: 50%;
+}
+
+#elec li{
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;;
+}
+>>>>>>> rocio
 
 section li {
     align-items: center;
@@ -66,7 +126,11 @@ p {
 .enlace {
     border:none;
     text-align: right;
+<<<<<<< HEAD
     font-size: 2rem;
+=======
+    font-size: 2.5rem;
+>>>>>>> rocio
 }
 
 a {
@@ -79,6 +143,29 @@ footer {
     text-align: center;
     margin:1rem
 }
+<<<<<<< HEAD
+=======
+
+.tarjetas {
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 70%;
+}
+.tarjetas div {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+   margin: 2rem;
+  
+   border-radius: 12px;
+   box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;;
+
+}
+>>>>>>> rocio
 
 @media (max-width: 800px) {
     article ul{
@@ -87,6 +174,13 @@ footer {
     section ul{
       grid-template-columns: 1fr 1fr;
     }
+    .enlace a{
+        font-size: 50%;
+    }
+    
+    nav ul{
+        flex-direction: column;
+     padding-left: 1rem; }
  
   }
 
