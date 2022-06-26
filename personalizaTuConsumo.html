@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Personaliza tu consumo</title>
+  </head>
+  <body>
+    <head>
+        <h1>PERSONALIZA TU CONSUMO</h1>
+    </head>
+    <main id="main">        
+        <form id="mother" name="mother">
+            <div>
+            <img id="img" src="./img/electrodomestico.png" alt="Icono del electrodomestico">
+            <select name="selBox" id="selBox" required>
+                <option value=""> Elige una opcion...</option>
+                <option value="Nev">Nevera</option>
+                <option value="Lav">Lavadora</option>
+                <option value="Vit">Vitrocerámica</option>                    
+                <option value="Caf">Cafetera</option>
+                <option value="Vaj">Lavavajillas</option>
+                <option value="TV">TV</option>
+                <option value="PC">PC</option>
+                <option value="SisSon">Sistema de Sonido</option>
+                <option value="Carg">Cargador Móvil</option>
+                <option value="Asp">Aspiradora</option>
+                <option value="Pla">Plancha</option>
+                <option value="Otr">Otro</option>
+            </select>           
+            </div>
+            </div><input type="nombre" id="nombre" name="nombre" placeholder="Nombre del aparato" required>
+            <div><input type="number" step=any id="wats" name="wats" placeholder="Consumo en Kw/h" required>
+            <label for="wats">Kw/h</label></div>
+            <button id="anadir" type="submit">Añadir</button>           
+        </form>
+    </main>
+    <script  type="module" src="./js/mostrarListaPersonalizada.js"></script>
+  </body>
+
+</html>
