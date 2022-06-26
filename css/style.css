@@ -1,82 +1,224 @@
 * {
-  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: content-box;
 }
-
+header{
+  width: 100%;
+}
 h1 {
   text-align: center;
+  padding: 2rem;
+  color:white;
+  background-color: #311a91;
+  font-family: 'Montserrat', sans-serif;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color:rgb(245, 245, 246);
+ 
 }
+
+nav ul{
+  display: flex;
+  justify-content: center;
+  background-color: #000062;
+  list-style-type: none;
+  padding: 1rem;
+}
+
+nav ul li a{
+  color:white;
+  font-size: 2rem;
+  text-decoration: none;
+  border: none;
+}
+li{
+  margin:1rem;
+} 
+a{padding: 1rem;}
+
 #img {
-  width: 3rem;
   height: 3rem;
-  background-color:rgb(255, 255, 255);
   margin-right: 1rem;
-  
 }
-main{
-  display:flex;
+
+main {
+  display:grid;
   align-content: center;
   justify-content: space-around; 
-
   border-radius: 12px; 
   padding: 1rem;
-  max-width: fit-content;
+}
+
+main section {
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 3px solid rgb(245, 245, 246);
+
+}
+#total{
+  display:grid;
+  grid-template-columns: 1fr;
+}
+
+main section:last-child {
+  display:flex;
+  justify-content: end;
+}
+
+#total {
+  text-align: right;
+  padding: 1rem;
+  font-weight: bold;
+  background-color:  rgb(245, 245, 246);
+  box-shadow: none;
+  padding-right: 7rem;
   
 }
+#total p{font-size: 2rem;}
+a{
+  text-align: center;
+}
 
-form{
+a > img:hover {
+  cursor: pointer;  
+}
+
+main section div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  width: 40%;
+  margin: 1rem;
+}
+
+a img {
+  width: 25%;
+}
+
+p {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+form {
   display: flex;
-  align-items: center;   
-  border:1.5px solid black;
+  align-items: center;
+  justify-content: center;   
   border-radius: 12px;
+  margin-bottom: 2rem;
   padding:1rem;
-} 
-
-div{ display: flex;
-  align-content: space-between;
-  align-items: center; 
+}
+form p{
+  padding: 1rem;
+  font-weight: bold;
+}
+form div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-input{
-   margin-left: 2rem; 
-   padding-right: 0.5rem;
-   margin-right: 0px;
+a > img:hover {
+  cursor: pointer;  
 }
-label{
+
+input {
+ margin-left: 2rem; 
+ padding-right: 0.5rem;
+ margin-right: 0px;
+}
+
+label {
   margin-left: 0;
   padding-left: 0;
 }
 
-
-
-button{
+button {
+  border: none;
   border-radius: 12px;
   background-color: white;
   height: 2rem;
   width: 5rem;
   margin-left: 2rem;
+  background-color: #311a91;
+  color: white;
+  
+ 
+}
+
+section div p:first-child, section div p:last-child {
+  font-weight: bold;
 }
 
 
+
 @media (max-width: 800px) {
-  main{
-    justify-content: flex-start;
-  }
+
   form {
     flex-direction: column;
     margin:2rem;
     align-content: flex-start;
     justify-content: flex-start;
-   
+  }
+  nav ul{
+    flex-direction: column;
+    padding-left: 1rem; }
+
+  }
+  #total{
+    padding-right: 3rem;
   }
   input{
     margin:1rem;
-    
+  }
+
+  main section{
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+
+  main section div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+
+
+@media (max-width: 550px) {
+  main section div{
+    display: flex;
+    flex-direction: column;  
+  }
+  div a{
+    display:flex;
+    justify-content: center;
+  }
+  main section{
+    grid-template-columns: 1fr ;
+  }
+  img{
+    width: 20%;
+    margin:1rem auto;
+  }
+
+  a img{
+    width: 10%;
   }
 }
