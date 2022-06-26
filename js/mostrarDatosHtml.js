@@ -16,20 +16,15 @@ function mostraDatos(){
   let fechaHoy = new Date();
   const horaActual = fechaHoy.getHours();
   fechaHoy = String(fechaHoy.toLocaleDateString());
-  //console.log(fechaHoy);
 
   const preciosLuz = JSON.parse(localStorage.getItem("Precios"));
-  //console.log("precios" + preciosLuz);
   const maximoValor = JSON.parse(localStorage.getItem("maximoValor"));
-  //console.log(maximoValor);
   const minimoValor = JSON.parse(localStorage.getItem("minimoValor"));
 
   const tituloFecha = document.querySelector("body h1");
-  //console.log(tituloFecha);
   const fechaPintar = document.createElement("p");
   fechaPintar.textContent = `Hoy es ${fechaHoy}`;
   tituloFecha.append(fechaPintar);
-  //console.log("fechaPintar", fechaPintar.textContent);
 
   const ulArticle = document.querySelector("article>ul");
   for (let i = 0; i < preciosLuz.length; i++) {
