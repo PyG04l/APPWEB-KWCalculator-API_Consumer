@@ -29,7 +29,7 @@ function addItem() {
       ].text.toUpperCase()
   );
   arrData.push(document.getElementById("nombre").value);
-  arrData.push(document.getElementById("wats").value);
+  arrData.push(Math.abs(document.getElementById("wats").value));
   return arrData;
 }
 
@@ -155,7 +155,6 @@ function createSel() {
   const mainElement = document.querySelector("#main");
   const fElement = document.createElement("form");
   const otraHora = document.createElement("p");
-  /* otraHora.textContent("Elije otra hora para ver el consumo"); */
   const selElement = document.createElement("select");
   const opElement = document.createElement("option");
 
