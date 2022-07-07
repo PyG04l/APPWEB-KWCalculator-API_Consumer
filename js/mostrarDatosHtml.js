@@ -2,13 +2,9 @@
 
 function mostraDatos(){
   
-  const lav = 0.624,
-  tv = 0.099,
-  vaj = 1.5,
-  caf = 1.95,
-  asp = 1.44,
-  pla = 2;
-  let resul;
+  let resul = 0;
+
+  const els = [0.624, 0.099, 1.5, 1.95, 1.44, 2];
 
 
   let fechaHoy = new Date();
@@ -58,42 +54,14 @@ function mostraDatos(){
   parrafoPrecioActual.textContent = `Actual: ${horaActual}h > ${preciosLuz[horaActual]}€/Mw`;
   precioActual.append(parrafoPrecioActual);
 
-  const lavadora = document.querySelector("#elec li:first-child");
-  const parrafoLav = document.createElement("p");
-  resul = ((lav * preciosLuz[horaActual]) / 1000).toFixed(2);
-  parrafoLav.textContent = `${resul}€/h`;
-  lavadora.append(parrafoLav);
+  for (let i = 1; i < 7; i++) {
+    let elect = document.querySelector(`#elec li:nth-child(${i})`);
+    let p = document.createElement("p");
+    resul = ((els[i] * preciosLuz[horaActual]) / 1000).toFixed(2);
+    p.textContent = `${resul}€/h`;
+    elect.append(p);
+  }
 
-  const tele = document.querySelector("#elec li:nth-child(2)");
-  const parrafoTv = document.createElement("p");
-  resul = ((tv * preciosLuz[horaActual]) / 1000).toFixed(2);
-  parrafoTv.textContent = `${resul}€/h`;
-  tele.append(parrafoTv);
-
-  const vajilla = document.querySelector("#elec li:nth-child(3)");
-  const parrafoVaj = document.createElement("p");
-  resul = ((vaj * preciosLuz[horaActual]) / 1000).toFixed(2);
-  parrafoVaj.textContent = `${resul}€/h`;
-  vajilla.append(parrafoVaj);
-
-  const cafetera = document.querySelector("#elec li:nth-child(4)");
-  const parrafoCaf = document.createElement("p");
-  resul = ((caf * preciosLuz[horaActual]) / 1000).toFixed(2);
-  parrafoCaf.textContent = `${resul}€/h`;
-  cafetera.append(parrafoCaf);
-
-  const aspiradora = document.querySelector("#elec li:nth-child(5)");
-  const parrafoAsp = document.createElement("p");
-  resul = ((asp * preciosLuz[horaActual]) / 1000).toFixed(2);
-  parrafoAsp.textContent = `${resul}€/h`;
-  aspiradora.append(parrafoAsp);
-
-  const plancha = document.querySelector("#elec li:nth-child(6)");
-  const parrafoPla = document.createElement("p");
-  resul = ((pla * preciosLuz[horaActual]) / 1000).toFixed(2);
-  parrafoPla.textContent = `${resul}€/h`;
-  plancha.append(parrafoPla);
-  
 }
 
 export {mostraDatos};
