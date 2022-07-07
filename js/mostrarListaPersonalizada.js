@@ -41,8 +41,10 @@ function allInLS(event) {
     "listaElectrodomesticos",
     JSON.stringify(listaElectrodomesticos)
   );
+
   const fE = draw1Item(arr);
   mainElement.append(fE);
+
   if (!document.getElementById("total")) {
     pintarTotal(calcularTotal());
   } else {
@@ -154,7 +156,6 @@ function erase1() {
 function createSel() {
   const mainElement = document.querySelector("#main");
   const fElement = document.createElement("form");
-  const otraHora = document.createElement("p");
   const selElement = document.createElement("select");
   const opElement = document.createElement("option");
 
